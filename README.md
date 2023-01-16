@@ -14,7 +14,6 @@
   uvicorn==0.20.0
   sqlalchemy==1.4.46
   alembic==1.9.2
-  python-dotenv==0.21.0
 ```
 
 # Развертывание PostgreSQL
