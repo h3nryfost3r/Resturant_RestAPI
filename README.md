@@ -9,7 +9,6 @@
 # Установка необходимых компонентов
 
 Чтобы установить необходимые библиотеки, выполните команду `$ pip install -r requirements.txt`
-`requirements.txt`
 ```
   fastapi==0.89.1
   uvicorn==0.20.0
