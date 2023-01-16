@@ -14,6 +14,7 @@
   uvicorn==0.20.0
   sqlalchemy==1.4.46
   alembic==1.9.2
+  psycopg2-binary==2.9.5
 ```
 
 # Развертывание PostgreSQL
