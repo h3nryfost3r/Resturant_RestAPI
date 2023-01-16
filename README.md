@@ -4,7 +4,7 @@
 
 # Требования
 
-В качестве СУБД используется PostgreSQL, которая будет развернута в Docker Compose, который входит в состав Docker (Скачать Dockert можно по [ссылке](https://docs.docker.com/get-docker/)). Используемые библиотеки хранятся в файле requirements.txt.
+В качестве СУБД используется PostgreSQL, которая будет развернута в Docker Compose, который входит в состав Docker (Скачать Docker можно по [ссылке](https://docs.docker.com/get-docker/)). Используемые библиотеки хранятся в файле requirements.txt.
 
 # Установка необходимых компонентов
 
