@@ -7,7 +7,8 @@ router = APIRouter()
 
 # CRUD Menu
 @router.get(
-    '/api/v1/menus'
+    '/api/v1/menus',
+    tags=["menu"]
 )
 def get_menus(
     db: Session = Depends(get_db)
@@ -18,7 +19,8 @@ def get_menus(
     return menus
 
 @router.get(
-    '/api/v1/menus/{target_menu_id}'
+    '/api/v1/menus/{target_menu_id}',
+    tags=["menu"]
 )
 def get_target_menu(
     target_menu_id, 
@@ -35,7 +37,8 @@ def get_target_menu(
 
 @router.post(
     '/api/v1/menus', 
-    status_code=status.HTTP_201_CREATED
+    status_code=status.HTTP_201_CREATED,
+    tags=["menu"]
 )
 def create_menu(
     request: schema.Group, 
@@ -51,7 +54,8 @@ def create_menu(
     return new_menu.get_response_body(db)
 
 @router.patch(
-    '/api/v1/menus/{target_menu_id}'
+    '/api/v1/menus/{target_menu_id}',
+    tags=["menu"]
 )
 def update_target_menu(
     target_menu_id, 
@@ -69,7 +73,8 @@ def update_target_menu(
     return menu.get_response_body(db)
 
 @router.delete(
-    '/api/v1/menus/{target_menu_id}'
+    '/api/v1/menus/{target_menu_id}',
+    tags=["menu"]
 )
 def delete_target_menu(
     target_menu_id,

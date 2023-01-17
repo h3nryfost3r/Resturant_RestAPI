@@ -7,7 +7,8 @@ router = APIRouter()
 
 # CRUD Submenu
 @router.get(
-    '/api/v1/menus/{target_menu_id}/submenus'
+    '/api/v1/menus/{target_menu_id}/submenus',
+    tags=["submenu"]
 )
 def get_submenus(
     target_menu_id, 
@@ -22,7 +23,8 @@ def get_submenus(
         
 
 @router.get(
-    '/api/v1/menus/{target_menu_id}/submenus/{target_submenu_id}'
+    '/api/v1/menus/{target_menu_id}/submenus/{target_submenu_id}',
+    tags=["submenu"]
 )
 def get_target_submenu(
     target_menu_id, 
@@ -36,7 +38,8 @@ def get_target_submenu(
 
 @router.post(
     '/api/v1/menus/{target_menu_id}/submenus',
-    status_code=status.HTTP_201_CREATED
+    status_code=status.HTTP_201_CREATED,
+    tags=["submenu"]
 )
 def create_submenu(
     target_menu_id,
@@ -65,7 +68,8 @@ def create_submenu(
 
 @router.patch(
     '/api/v1/menus/{target_menu_id}/submenus/{target_submenu_id}', 
-    status_code=status.HTTP_200_OK
+    status_code=status.HTTP_200_OK,
+    tags=["submenu"]
 )
 def update_target_submenu(
     target_menu_id,
@@ -87,7 +91,8 @@ def update_target_submenu(
     return submenu.get_response_body(db)
 
 @router.delete(
-    '/api/v1/menus/{target_menu_id}/submenus/{target_submenu_id}'
+    '/api/v1/menus/{target_menu_id}/submenus/{target_submenu_id}',
+    tags=["submenu"]
 )
 def delete_target_submenu(
     target_menu_id,

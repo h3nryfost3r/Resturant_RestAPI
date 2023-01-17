@@ -11,7 +11,8 @@ router = APIRouter()
 # CRUD Dish
 @router.get(
     '/api/v1/menus/{target_menu_id}/submenus/{target_submenu_id}/dishes',
-    response_model=List[schema.Item]
+    response_model=List[schema.Item],
+    tags=["dish"]
     )
 def get_dishes(
     target_menu_id, 
@@ -31,7 +32,8 @@ def get_dishes(
     return dishes_list
 
 @router.get(
-    '/api/v1/menus/{target_menu_id}/submenus/{target_submenu_id}/dishes/{target_dish_id}'
+    '/api/v1/menus/{target_menu_id}/submenus/{target_submenu_id}/dishes/{target_dish_id}',
+    tags=["dish"]
 )
 def get_target_dish(
     target_menu_id, 
@@ -53,7 +55,8 @@ def get_target_dish(
 
 @router.post(
     '/api/v1/menus/{target_menu_id}/submenus/{target_submenu_id}/dishes', 
-    status_code=status.HTTP_201_CREATED
+    status_code=status.HTTP_201_CREATED,
+    tags=["dish"]
 )
 def create_dish(
     target_menu_id, 
@@ -85,7 +88,8 @@ def create_dish(
     return new_dish.get_response_body()
 
 @router.patch(
-    '/api/v1/menus/{target_menu_id}/submenus/{target_submenu_id}/dishes/{target_dish_id}'
+    '/api/v1/menus/{target_menu_id}/submenus/{target_submenu_id}/dishes/{target_dish_id}',
+    tags=["dish"]
 )
 def update_target_dish(
     target_menu_id, 
@@ -112,7 +116,8 @@ def update_target_dish(
     return dish.get_response_body()
 
 @router.delete(
-    '/api/v1/menus/{target_menu_id}/submenus/{target_submenu_id}/dishes/{target_dish_id}'
+    '/api/v1/menus/{target_menu_id}/submenus/{target_submenu_id}/dishes/{target_dish_id}',
+    tags=["dish"]
 )
 def delete_target_dish(
     target_menu_id, 
